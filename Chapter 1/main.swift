@@ -1,10 +1,9 @@
-
 struct ListIterator<T>: IteratorProtocol {
 	typealias Element = T
 
-	var node: list<T>?
+	var node: List<T>?
 
-	init(node: list<T>) {
+	init(node: List<T>) {
 		self.node = node
 	}
 
@@ -14,11 +13,11 @@ struct ListIterator<T>: IteratorProtocol {
 	}
 }
 
-class list<T>: ExpressibleByArrayLiteral, CustomStringConvertible, Sequence {
+class List<T>: ExpressibleByArrayLiteral, CustomStringConvertible, Sequence {
 	let value: T?
-	var next: list<T>?
+	var next: List<T>?
 
-	init(value: T?, next: list<T>?) {
+	init(value: T?, next: List<T>?) {
 		self.value = value
 		self.next = next
 	}
@@ -37,7 +36,7 @@ class list<T>: ExpressibleByArrayLiteral, CustomStringConvertible, Sequence {
 		self.init(value: firstElement)
 		var node = self
 		for element in elements.dropFirst() {
-			let newNode = list<T>(value: element)
+			let newNode = List<T>(value: element)
 			node.next = newNode
 			node = newNode
 		}
@@ -67,8 +66,8 @@ class list<T>: ExpressibleByArrayLiteral, CustomStringConvertible, Sequence {
 	}
 
 	//
-	func inserting(_ item: T?) -> list<T> {
-		return list(value: item, next: self)
+	func inserting(_ item: T?) -> List<T> {
+		return List(value: item, next: self)
 	}
 
 	func find(withPredicate predicate: (T?) -> Bool) -> T? {
@@ -91,16 +90,14 @@ class list<T>: ExpressibleByArrayLiteral, CustomStringConvertible, Sequence {
 	}
 }
 
-extension list where T: Equatable {
+extension List where T: Equatable {
 	func find(item: T?) -> T? {
 		return find { $0 == item }
 	}
 }
 
 //
-typealias id = String
-
-enum binop: CustomStringConvertible {
+enum BinaryOperation: CustomStringConvertible {
 	case plus
 	case minus
 	case times
@@ -126,42 +123,43 @@ enum InterpretationError: Error {
 	case VariableNotFound(String)
 }
 
-indirect enum stm: CustomStringConvertible {
-	case CompoundStm(stm, stm)
-	case AssignStm(id, exp)
-	case PrintStm(list<exp>)
+indirect enum Statement: CustomStringConvertible {
+	case compound(Statement, Statement)
+	case assign(String, Expression)
+	case print(List<Expression>)
 
 	var description: String {
 		get {
 			switch self {
-			case .CompoundStm(let stmA, let stmB):
-				return "\(stmA); \(stmB)"
-			case .AssignStm(let id, let exp):
-				return "\(id) := \(exp)"
-			case .PrintStm(let list):
+			case .compound(let statementA, let statementB):
+				return "\(statementA); \(statementB)"
+			case .assign(let id, let expression):
+				return "\(id) := \(expression)"
+			case .print(let list):
 				return "print(\(list.description(withSeparator: ", ")))"
 			}
 		}
 	}
 
-	typealias Environment = list<(id: String, value: Int)>
+	typealias Environment = List<(id: String, value: Int)>
 	@discardableResult
 	func interpret(_ table: Environment = []) throws -> Environment {
 		var table = table
 
 		do {
 			switch self {
-			case .CompoundStm(let stmA, let stmB):
-				table = try stmA.interpret(table)
-				table = try stmB.interpret(table)
-			case .AssignStm(let id, let exp):
+			case .compound(let statementA, let statementB):
+				table = try statementA.interpret(table)
+				table = try statementB.interpret(table)
+			case .assign(let id, let expression):
 				let result: Int
-				(result: result, table: table) = try exp.interpret(table)
+				(result: result, table: table) = try expression.interpret(table)
 				table = table.inserting((id, result))
-			case .PrintStm(let list):
-				for exp in list {
+			case .print(let list):
+				for expression in list {
 					let result: Int
-					(result: result, table: table) = try exp.interpret(table)
+					(result: result, table: table) =
+						try expression.interpret(table)
 					print(result, terminator: " ")
 				}
 				print("")
@@ -173,27 +171,27 @@ indirect enum stm: CustomStringConvertible {
 		return table
 	}
 
-	func visit(_ closure: (stm) -> ()) {
+	func visit(_ closure: (Statement) -> ()) {
 		closure(self)
 
 		switch self {
-		case .CompoundStm(let stmA, let stmB):
-			stmA.visit(closure)
-			stmB.visit(closure)
-		case .AssignStm(_, let exp):
-			exp.visit(closure)
-		case .PrintStm(let list):
-			for exp in list {
-				exp.visit(closure)
+		case .compound(let statementA, let statementB):
+			statementA.visit(closure)
+			statementB.visit(closure)
+		case .assign(_, let expression):
+			expression.visit(closure)
+		case .print(let list):
+			for expression in list {
+				expression.visit(closure)
 			}
 		}
 	}
 
-	func maxArgs() ->  UInt {
+	func maxArgs() -> UInt {
 		var result: UInt = 0
-		self.visit { (stm: stm) in
-			switch stm {
-			case .PrintStm(let list):
+		self.visit { (statement: Statement) in
+			switch statement {
+			case .print(let list):
 				result = max(result, list.count())
 			default: break
 			}
@@ -202,28 +200,30 @@ indirect enum stm: CustomStringConvertible {
 	}
 }
 
-indirect enum exp: CustomStringConvertible {
-	case IdExp(id)
-	case NumExp(Int)
-	case OpExp(exp, binop, exp)
-	case EseqExp(stm, exp)
+indirect enum Expression: CustomStringConvertible {
+	case id(String)
+	case number(Int)
+	case operation(Expression, BinaryOperation, Expression)
+	case sequential(Statement, Expression)
 
 	var description: String {
 		get {
 			switch self {
-			case .IdExp(let id):
+			case .id(let id):
 				return id
-			case .NumExp(let int):
+			case .number(let int):
 				return "\(int)"
-			case .OpExp(let expA, let binop, let expB):
-				return "\(expA)\(binop)\(expB)"
-			case .EseqExp(let stm, let exp):
-				return "(\(stm), \(exp))"
+			case .operation(let expressionA,
+			                let binaryOperation,
+			                let expressionB):
+				return "\(expressionA)\(binaryOperation)\(expressionB)"
+			case .sequential(let statement, let expression):
+				return "(\(statement), \(expression))"
 			}
 		}
 	}
 
-	typealias Environment = list<(id: String, value: Int)>
+	typealias Environment = List<(id: String, value: Int)>
 	@discardableResult
 	func interpret(_ table: Environment)
 		throws -> (result: Int, table: Environment) {
@@ -233,20 +233,20 @@ indirect enum exp: CustomStringConvertible {
 
 			do {
 				switch self {
-				case .IdExp(let id):
+				case .id(let id):
 					let optionalBinding = table.find { $0?.id == id }
 					guard let binding = optionalBinding else {
 						throw InterpretationError.VariableNotFound(id)
 					}
 					result = binding.value
 
-				case .NumExp(let number):
+				case .number(let number):
 					result = number
 
-				case .OpExp(let expA, let binOp, let expB):
+				case .operation(let expressionA, let binOp, let expressionB):
 					let lhs, rhs: Int
-					(result: lhs, table: table) = try expA.interpret(table)
-					(result: rhs, table: table) = try expB.interpret(table)
+					(result: lhs, table: table) = try expressionA.interpret(table)
+					(result: rhs, table: table) = try expressionB.interpret(table)
 					switch binOp {
 					case .plus:
 						result = lhs + rhs
@@ -258,9 +258,9 @@ indirect enum exp: CustomStringConvertible {
 						result = lhs / rhs
 					}
 
-				case .EseqExp(let stm, let exp):
-					table = try stm.interpret(table)
-					(result: result, table: table) = try exp.interpret(table)
+				case .sequential(let statement, let expression):
+					table = try statement.interpret(table)
+					(result: result, table: table) = try expression.interpret(table)
 				}
 			} catch (let error) {
 				throw error
@@ -269,29 +269,32 @@ indirect enum exp: CustomStringConvertible {
 			return (result: result, table: table)
 	}
 
-	func visit(_ closure: (stm) -> ()) {
+	func visit(_ closure: (Statement) -> ()) {
 		switch self {
-		case .IdExp: break
-		case .NumExp: break
-		case .OpExp(let expA, _, let expB):
-			expA.visit(closure)
-			expB.visit(closure)
-		case .EseqExp(let stm, let exp):
-			stm.visit(closure)
-			exp.visit(closure)
+		case .id: break
+		case .number: break
+		case .operation(let expressionA, _, let expressionB):
+			expressionA.visit(closure)
+			expressionB.visit(closure)
+		case .sequential(let statement, let expression):
+			statement.visit(closure)
+			expression.visit(closure)
 		}
 	}
 }
 
 //
-let a1 = stm.AssignStm("a", .OpExp(.NumExp(5), .plus, .NumExp(3)))
-let l1: list<exp> = [.IdExp("a"), .OpExp(.IdExp("a"), .minus, .NumExp(1))]
-let a2 = stm.AssignStm("b", .EseqExp(.PrintStm(l1), .OpExp(.NumExp(10), .times, .IdExp("a"))))
-let prog = stm.CompoundStm(a1, .CompoundStm(a2, .PrintStm([.IdExp("b")])))
+let a1 = Statement.assign("a", .operation(.number(5), .plus, .number(3)))
+let l1: List<Expression> = [.id("a"), .operation(.id("a"), .minus, .number(1))]
+let a2 = Statement.assign("b",
+                          .sequential(.print(l1),
+                                      .operation(.number(10),
+                                                 .times,
+                                                 .id("a"))))
+let prog = Statement.compound(a1, .compound(a2, .print([.id("b")])))
 
 print(prog)
 
 print(prog.maxArgs())
 
 try! prog.interpret()
-

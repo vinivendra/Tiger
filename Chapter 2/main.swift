@@ -1,4 +1,5 @@
-// TODO: Add temporary comment indicators to ensure comments are being identified correctly
+// TODO: Add temporary comment indicators to ensure comments are being 
+// identified correctly
 // TODO: Add tests?
 
 let toknames = [
@@ -17,7 +18,6 @@ func tokname(_ tok: Int32) -> String {
 		return toknames[tok - 257]
 	}
 }
-
 
 //
 typealias CString = UnsafeMutablePointer<Int8>

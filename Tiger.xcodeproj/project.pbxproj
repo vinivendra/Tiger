@@ -157,7 +157,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24C4BC871DF4635F00193AA4 /* Build configuration list for PBXNativeTarget "Chapter 2" */;
 			buildPhases = (
-				24C4BC8A1DF4676A00193AA4 /* ShellScript */,
+				245CDD661DF49ECE00AC04DE /* Swiftlint */,
+				24C4BC8A1DF4676A00193AA4 /* Lex */,
 				24C4BC7D1DF4635F00193AA4 /* Sources */,
 				24C4BC7E1DF4635F00193AA4 /* Frameworks */,
 				24C4BC7F1DF4635F00193AA4 /* CopyFiles */,
@@ -213,13 +214,28 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		24C4BC8A1DF4676A00193AA4 /* ShellScript */ = {
+		245CDD661DF49ECE00AC04DE /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = swiftlint;
+		};
+		24C4BC8A1DF4676A00193AA4 /* Lex */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Lex;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

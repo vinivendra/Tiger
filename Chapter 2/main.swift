@@ -1,5 +1,3 @@
-// TODO: Add temporary comment indicators to ensure comments are being 
-// identified correctly
 // TODO: Add tests?
 
 let toknames = [
@@ -8,11 +6,13 @@ let toknames = [
 	"MINUS", "TIMES", "DIVIDE", "EQ", "NEQ", "LT", "LE", "GT", "GE",
 	"AND", "OR", "ASSIGN", "ARRAY", "IF", "THEN", "ELSE", "WHILE", "FOR",
 	"TO", "DO", "LET", "IN", "END", "OF", "BREAK", "NIL", "FUNCTION",
-	"VAR", "TYPE"
+	"VAR", "TYPE",
+	//
+	"COMMENT_START", "COMMENT_END"
 ]
 
 func tokname(_ tok: Int32) -> String {
-	if tok < 257 || tok > 299 {
+	if tok < 257 || tok > 301 {
 		return "BAD_TOKEN"
 	} else {
 		return toknames[tok - 257]

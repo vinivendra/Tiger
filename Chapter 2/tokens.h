@@ -48,4 +48,6 @@ extern YYSTYPE yylval;
 # define FUNCTION 297
 # define VAR 298
 # define TYPE 299
+# define COMMENT_START 300
+# define COMMENT_END 301
 

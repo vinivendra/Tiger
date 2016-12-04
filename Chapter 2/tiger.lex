@@ -36,12 +36,12 @@ for  	 {adjust(); return FOR;}
 	adjust();
 	BEGIN(COMMENT);
 	commentLevel++;
-	return LBRACK;
+	return COMMENT_START;
 }
 <COMMENT>"/*" {
 	adjust();
 	commentLevel++;
-	return LBRACK;
+	return COMMENT_START;
 }
 <COMMENT>"*/" {
 	adjust();
@@ -49,7 +49,7 @@ for  	 {adjust(); return FOR;}
 	if (commentLevel == 0) {
 		BEGIN(INITIAL);
 	}
-	return RBRACK;
+	return COMMENT_END;
 }
 <COMMENT>. {adjust(); continue;}
 

@@ -784,7 +784,7 @@ YY_RULE_SETUP
 	adjust();
 	BEGIN(COMMENT);
 	commentLevel++;
-	return LBRACK;
+	return COMMENT_START;
 }
 	YY_BREAK
 case 7:
@@ -793,7 +793,7 @@ YY_RULE_SETUP
 {
 	adjust();
 	commentLevel++;
-	return LBRACK;
+	return COMMENT_START;
 }
 	YY_BREAK
 case 8:
@@ -805,7 +805,7 @@ YY_RULE_SETUP
 	if (commentLevel == 0) {
 		BEGIN(INITIAL);
 	}
-	return RBRACK;
+	return COMMENT_END;
 }
 	YY_BREAK
 case 9:

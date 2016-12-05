@@ -1,8 +1,105 @@
 // TODO: Add tests?
 // TODO: Consider adding CString lib
 
-func tokname(_ tok: Int32) -> String {
-	let toknames = [
+typealias CString = UnsafeMutablePointer<Int8>
+
+//
+extension Array {
+	func prettyPrint(initiator: String = "[",
+	                 separator: String = ", ",
+	                 terminator: String = "]") {
+		let count = self.count
+		guard count > 0 else {
+			print(initiator + terminator)
+			return
+		}
+		guard count > 1 else {
+			print(initiator + "\(self[0])" + terminator)
+			return
+		}
+
+		for element in self.dropLast() {
+			print("\(element)" + separator, terminator: "")
+		}
+
+		print("\(self.last)" + terminator)
+	}
+
+	func prettyPrintInLines() {
+		self.prettyPrint(initiator: "", separator: "\n", terminator: "")
+	}
+}
+
+//
+public struct Token: CustomStringConvertible, Equatable {
+	public static func == (lhs: Token, rhs: Token) -> Bool {
+		print("comparing \(lhs) and \(rhs)")
+		return lhs.id == rhs.id
+			&& lhs.position == rhs.position
+			&& lhs.value == rhs.value
+	}
+
+	let id: CInt
+	let position: CInt
+	let value: SemanticValue?
+
+	var name: String {
+		get {
+			if id < Token.namesBaseIndex ||
+				id > Token.namesBaseIndex + Token.namesCount {
+				return "BAD_TOKEN"
+			} else {
+				return Token.names[id - Token.namesBaseIndex]
+			}
+		}
+	}
+
+	init(id: CInt, position: CInt = EM_tokPos, value: SemanticValue? = nil) {
+		self.id = id
+		self.position = position
+		self.value = value
+	}
+
+	init?(name: String,
+	      position: CInt = EM_tokPos,
+	      value: SemanticValue? = nil) {
+		guard let id = Token.names.index(of: name) else { return nil }
+		self.init(id: CInt(id) + Token.namesBaseIndex,
+		          position: position,
+		          value: value)
+	}
+
+	//
+	enum SemanticValue: CustomStringConvertible, Equatable {
+		public static func == (lhs: SemanticValue, rhs: SemanticValue) -> Bool {
+			switch (lhs, rhs) {
+			case (.int(let lhsInt), .int(let rhsInt)):
+				return lhsInt == rhsInt
+			case (.string(let lhsString), .string(let rhsString)):
+				return lhsString == rhsString
+			default:
+				return false
+			}
+		}
+
+		case int(CInt)
+		case string(String)
+
+		var description: String {
+			get {
+				switch self {
+				case .int(let int):
+					return String(int)
+				case .string(let string):
+					return string
+				}
+			}
+		}
+	}
+
+	private static let namesBaseIndex: CInt = 257
+	private static let namesCount: CInt = CInt(names.count)
+	private static let names = [
 		"ID", "STRING", "INT", "COMMA", "COLON", "SEMICOLON", "LPAREN",
 		"RPAREN", "LBRACK", "RBRACK", "LBRACE", "RBRACE", "DOT", "PLUS",
 		"MINUS", "TIMES", "DIVIDE", "EQ", "NEQ", "LT", "LE", "GT", "GE",
@@ -13,38 +110,47 @@ func tokname(_ tok: Int32) -> String {
 		"COMMENT_START", "COMMENT_END"
 	]
 
-	if tok < 257 || tok > 301 {
-		return "BAD_TOKEN"
-	} else {
-		return toknames[tok - 257]
+	//
+	public var description: String {
+		get {
+			if let value = self.value?.description {
+				return "(\(name) at \(position): \(value))"
+			} else {
+				return "(\(name) at \(position))"
+			}
+		}
 	}
 }
 
-typealias CString = UnsafeMutablePointer<Int8>
-
 //
-public func parse(file: String) {
+public func parse(file: String) -> [Token] {
 	let path = CommandLine.arguments[1] + "/"
 	let filename = path + file
 	filename.withCString { EM_reset(CString(mutating: $0)) }
 
-	while true {
-		let token = yylex()
-		if token == 0 {
-			break
+	var tokens = [Token]()
+
+	var tokenID = yylex()
+	while tokenID != 0 {
+		defer { tokenID = yylex() }
+
+		let token: Token
+		switch tokenID {
+		case ID, STRING:
+			token = Token(id: tokenID,
+			              value: .string(String(describing: yylval.sval)))
+		case INT:
+			token = Token(id: tokenID,
+			              value: .int(CInt(yylval.ival)))
+		default:
+			token = Token(id: tokenID)
 		}
 
-		switch token {
-		case ID:
-			print("ID:     \(tokname(token)) \(EM_tokPos) \(yylval.sval)")
-		case STRING:
-			print("String: \(tokname(token)) \(EM_tokPos) \(yylval.sval)")
-		case INT:
-			print("Int:    \(tokname(token)) \(EM_tokPos) \(yylval.ival)")
-		default:
-			print("Other:  \(tokname(token)) \(EM_tokPos)")
-		}
+		tokens.append(token)
 	}
+
+	return tokens
 }
 
-parse(file: "Chapter 2/test.tig")
+let tokens = parse(file: "Chapter 2/test.tig")
+tokens.prettyPrintInLines()

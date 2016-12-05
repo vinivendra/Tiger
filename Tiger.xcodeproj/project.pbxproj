@@ -47,6 +47,7 @@
 		245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter_2_Tests.swift; sourceTree = "<group>"; };
 		245CDD6F1DF4A18600AC04DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245CDD7A1DF4A42D00AC04DE /* errormsg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = errormsg.c; sourceTree = "<group>"; };
+		245CDD7D1DF4F7EC00AC04DE /* testComments.tig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testComments.tig; sourceTree = "<group>"; };
 		24A87EDF1DF45E1E00BAF2F6 /* Chapter 1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Chapter 1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A87EE11DF45E1E00BAF2F6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		24C4BC811DF4635F00193AA4 /* Chapter 2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Chapter 2"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */,
+				245CDD7D1DF4F7EC00AC04DE /* testComments.tig */,
 				245CDD6F1DF4A18600AC04DE /* Info.plist */,
 			);
 			path = "Chapter 2 Tests";

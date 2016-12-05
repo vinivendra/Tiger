@@ -1,4 +1,3 @@
-// TODO: Add tests?
 // TODO: Consider adding CString lib
 
 typealias CString = UnsafeMutablePointer<Int8>
@@ -9,7 +8,7 @@ extension Array {
 	                 separator: String = ", ",
 	                 terminator: String = "]") {
 		let count = self.count
-		guard count > 0 else {
+		guard let lastElement = self.last else {
 			print(initiator + terminator)
 			return
 		}
@@ -22,7 +21,7 @@ extension Array {
 			print("\(element)" + separator, terminator: "")
 		}
 
-		print("\(self.last)" + terminator)
+		print("\(lastElement)" + terminator)
 	}
 
 	func prettyPrintInLines() {
@@ -44,12 +43,10 @@ public struct Token: CustomStringConvertible, Equatable {
 
 	var name: String {
 		get {
-			if id < Token.namesBaseIndex ||
-				id > Token.namesBaseIndex + Token.namesCount {
-				return "BAD_TOKEN"
-			} else {
-				return Token.names[id - Token.namesBaseIndex]
-			}
+			precondition(
+				id >= Token.namesBaseIndex &&
+				id <= Token.namesBaseIndex + Token.namesCount)
+			return Token.names[id - Token.namesBaseIndex]
 		}
 	}
 

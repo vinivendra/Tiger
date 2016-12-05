@@ -14,6 +14,9 @@
 		245CDD771DF4A3F100AC04DE /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC951DF4695D00193AA4 /* driver.c */; };
 		245CDD7B1DF4A42D00AC04DE /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7A1DF4A42D00AC04DE /* errormsg.c */; };
 		245CDD7C1DF4A42D00AC04DE /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7A1DF4A42D00AC04DE /* errormsg.c */; };
+		245CDD801DF4FDC400AC04DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7F1DF4FDC400AC04DE /* Extensions.swift */; };
+		245CDD811DF4FDC400AC04DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7F1DF4FDC400AC04DE /* Extensions.swift */; };
+		245CDD821DF4FDC400AC04DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7F1DF4FDC400AC04DE /* Extensions.swift */; };
 		24A87EE21DF45E1E00BAF2F6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A87EE11DF45E1E00BAF2F6 /* main.swift */; };
 		24C4BC841DF4635F00193AA4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC831DF4635F00193AA4 /* main.swift */; };
 		24C4BC8D1DF4683900193AA4 /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC8C1DF4683900193AA4 /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -48,6 +51,7 @@
 		245CDD6F1DF4A18600AC04DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245CDD7A1DF4A42D00AC04DE /* errormsg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = errormsg.c; sourceTree = "<group>"; };
 		245CDD7D1DF4F7EC00AC04DE /* testComments.tig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testComments.tig; sourceTree = "<group>"; };
+		245CDD7F1DF4FDC400AC04DE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Common/Extensions.swift; sourceTree = SOURCE_ROOT; };
 		24A87EDF1DF45E1E00BAF2F6 /* Chapter 1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Chapter 1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A87EE11DF45E1E00BAF2F6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		24C4BC811DF4635F00193AA4 /* Chapter 2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Chapter 2"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +96,7 @@
 		243BF2641DEF0DE000F0202B = {
 			isa = PBXGroup;
 			children = (
+				245CDD831DF4FDF500AC04DE /* Common */,
 				24A87EE01DF45E1E00BAF2F6 /* Chapter 1 */,
 				24C4BC821DF4635F00193AA4 /* Chapter 2 */,
 				243BF26E1DEF0DE000F0202B /* Products */,
@@ -117,6 +122,14 @@
 			);
 			path = "Chapter 2 Tests";
 			sourceTree = SOURCE_ROOT;
+		};
+		245CDD831DF4FDF500AC04DE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				245CDD7F1DF4FDC400AC04DE /* Extensions.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
 		};
 		24A87EE01DF45E1E00BAF2F6 /* Chapter 1 */ = {
 			isa = PBXGroup;
@@ -313,6 +326,7 @@
 			files = (
 				245CDD7C1DF4A42D00AC04DE /* errormsg.c in Sources */,
 				245CDD761DF4A3F100AC04DE /* util.c in Sources */,
+				245CDD821DF4FDC400AC04DE /* Extensions.swift in Sources */,
 				245CDD771DF4A3F100AC04DE /* driver.c in Sources */,
 				245CDD731DF4A3C900AC04DE /* main.swift in Sources */,
 				245CDD6E1DF4A18600AC04DE /* Chapter_2_Tests.swift in Sources */,
@@ -325,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24A87EE21DF45E1E00BAF2F6 /* main.swift in Sources */,
+				245CDD801DF4FDC400AC04DE /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				245CDD7B1DF4A42D00AC04DE /* errormsg.c in Sources */,
+				245CDD811DF4FDC400AC04DE /* Extensions.swift in Sources */,
 				24C4BC941DF4685F00193AA4 /* util.c in Sources */,
 				24C4BC8D1DF4683900193AA4 /* lex.yy.c in Sources */,
 				24C4BC961DF4695D00193AA4 /* driver.c in Sources */,

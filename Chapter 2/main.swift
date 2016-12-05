@@ -1,35 +1,3 @@
-// TODO: Consider adding CString lib
-
-typealias CString = UnsafeMutablePointer<Int8>
-
-//
-extension Array {
-	func prettyPrint(initiator: String = "[",
-	                 separator: String = ", ",
-	                 terminator: String = "]") {
-		let count = self.count
-		guard let lastElement = self.last else {
-			print(initiator + terminator)
-			return
-		}
-		guard count > 1 else {
-			print(initiator + "\(self[0])" + terminator)
-			return
-		}
-
-		for element in self.dropLast() {
-			print("\(element)" + separator, terminator: "")
-		}
-
-		print("\(lastElement)" + terminator)
-	}
-
-	func prettyPrintInLines() {
-		self.prettyPrint(initiator: "", separator: "\n", terminator: "")
-	}
-}
-
-//
 public struct Token: CustomStringConvertible, Equatable {
 	public static func == (lhs: Token, rhs: Token) -> Bool {
 		return lhs.id == rhs.id
@@ -122,7 +90,7 @@ public struct Token: CustomStringConvertible, Equatable {
 public func parse(file: String) -> [Token] {
 	let path = CommandLine.arguments[1] + "/"
 	let filename = path + file
-	filename.withCString { EM_reset(CString(mutating: $0)) }
+	filename.withMutableCString { EM_reset($0) }
 
 	var tokens = [Token]()
 

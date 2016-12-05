@@ -1,3 +1,6 @@
+// TODO: Parse ID's
+// TODO: Parse all other tokens in Tiger 
+
 import XCTest
 
 class Chapter2Tests: XCTestCase {

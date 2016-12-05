@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245CDD6E1DF4A18600AC04DE /* Chapter_2_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */; };
+		245CDD731DF4A3C900AC04DE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC831DF4635F00193AA4 /* main.swift */; };
+		245CDD741DF4A3E600AC04DE /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC8C1DF4683900193AA4 /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		245CDD761DF4A3F100AC04DE /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC911DF4685F00193AA4 /* util.c */; };
+		245CDD771DF4A3F100AC04DE /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC951DF4695D00193AA4 /* driver.c */; };
+		245CDD7B1DF4A42D00AC04DE /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7A1DF4A42D00AC04DE /* errormsg.c */; };
+		245CDD7C1DF4A42D00AC04DE /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7A1DF4A42D00AC04DE /* errormsg.c */; };
 		24A87EE21DF45E1E00BAF2F6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A87EE11DF45E1E00BAF2F6 /* main.swift */; };
 		24C4BC841DF4635F00193AA4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC831DF4635F00193AA4 /* main.swift */; };
 		24C4BC8D1DF4683900193AA4 /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC8C1DF4683900193AA4 /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
-		24C4BC931DF4685F00193AA4 /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC8E1DF4685F00193AA4 /* errormsg.c */; };
 		24C4BC941DF4685F00193AA4 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC911DF4685F00193AA4 /* util.c */; };
 		24C4BC961DF4695D00193AA4 /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC951DF4695D00193AA4 /* driver.c */; };
 /* End PBXBuildFile section */
@@ -37,13 +43,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		245CDD6B1DF4A18600AC04DE /* Chapter 2 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chapter 2 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter_2_Tests.swift; sourceTree = "<group>"; };
+		245CDD6F1DF4A18600AC04DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		245CDD7A1DF4A42D00AC04DE /* errormsg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = errormsg.c; sourceTree = "<group>"; };
 		24A87EDF1DF45E1E00BAF2F6 /* Chapter 1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Chapter 1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A87EE11DF45E1E00BAF2F6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		24C4BC811DF4635F00193AA4 /* Chapter 2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Chapter 2"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C4BC831DF4635F00193AA4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		24C4BC8B1DF4683900193AA4 /* Chapter 2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chapter 2-Bridging-Header.h"; sourceTree = "<group>"; };
 		24C4BC8C1DF4683900193AA4 /* lex.yy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lex.yy.c; sourceTree = "<group>"; };
-		24C4BC8E1DF4685F00193AA4 /* errormsg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = errormsg.c; sourceTree = "<group>"; };
 		24C4BC8F1DF4685F00193AA4 /* errormsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = errormsg.h; sourceTree = "<group>"; };
 		24C4BC901DF4685F00193AA4 /* tokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokens.h; sourceTree = "<group>"; };
 		24C4BC911DF4685F00193AA4 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
@@ -55,6 +64,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		245CDD681DF4A18600AC04DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24A87EDC1DF45E1E00BAF2F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,9 +102,19 @@
 			children = (
 				24A87EDF1DF45E1E00BAF2F6 /* Chapter 1 */,
 				24C4BC811DF4635F00193AA4 /* Chapter 2 */,
+				245CDD6B1DF4A18600AC04DE /* Chapter 2 Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		245CDD6C1DF4A18600AC04DE /* Chapter 2 Tests */ = {
+			isa = PBXGroup;
+			children = (
+				245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */,
+				245CDD6F1DF4A18600AC04DE /* Info.plist */,
+			);
+			path = "Chapter 2 Tests";
+			sourceTree = SOURCE_ROOT;
 		};
 		24A87EE01DF45E1E00BAF2F6 /* Chapter 1 */ = {
 			isa = PBXGroup;
@@ -101,6 +127,7 @@
 		24C4BC821DF4635F00193AA4 /* Chapter 2 */ = {
 			isa = PBXGroup;
 			children = (
+				245CDD6C1DF4A18600AC04DE /* Chapter 2 Tests */,
 				24C4BC8B1DF4683900193AA4 /* Chapter 2-Bridging-Header.h */,
 				24C4BC831DF4635F00193AA4 /* main.swift */,
 				24C4BC9B1DF46FD000193AA4 /* test.tig */,
@@ -123,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				24C4BC901DF4685F00193AA4 /* tokens.h */,
-				24C4BC8E1DF4685F00193AA4 /* errormsg.c */,
+				245CDD7A1DF4A42D00AC04DE /* errormsg.c */,
 				24C4BC8F1DF4685F00193AA4 /* errormsg.h */,
 				24C4BC911DF4685F00193AA4 /* util.c */,
 				24C4BC921DF4685F00193AA4 /* util.h */,
@@ -136,6 +163,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		245CDD6A1DF4A18600AC04DE /* Chapter 2 Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 245CDD701DF4A18600AC04DE /* Build configuration list for PBXNativeTarget "Chapter 2 Tests" */;
+			buildPhases = (
+				245CDD671DF4A18600AC04DE /* Sources */,
+				245CDD681DF4A18600AC04DE /* Frameworks */,
+				245CDD691DF4A18600AC04DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chapter 2 Tests";
+			productName = "Chapter 2 Tests";
+			productReference = 245CDD6B1DF4A18600AC04DE /* Chapter 2 Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		24A87EDE1DF45E1E00BAF2F6 /* Chapter 1 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A87EE31DF45E1E00BAF2F6 /* Build configuration list for PBXNativeTarget "Chapter 1" */;
@@ -182,6 +226,11 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Vinicius Vendramini";
 				TargetAttributes = {
+					245CDD6A1DF4A18600AC04DE = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = HHT774898M;
+						ProvisioningStyle = Automatic;
+					};
 					24A87EDE1DF45E1E00BAF2F6 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = HHT774898M;
@@ -209,9 +258,20 @@
 			targets = (
 				24A87EDE1DF45E1E00BAF2F6 /* Chapter 1 */,
 				24C4BC801DF4635F00193AA4 /* Chapter 2 */,
+				245CDD6A1DF4A18600AC04DE /* Chapter 2 Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		245CDD691DF4A18600AC04DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		245CDD661DF49ECE00AC04DE /* Swiftlint */ = {
@@ -245,6 +305,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		245CDD671DF4A18600AC04DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				245CDD7C1DF4A42D00AC04DE /* errormsg.c in Sources */,
+				245CDD761DF4A3F100AC04DE /* util.c in Sources */,
+				245CDD771DF4A3F100AC04DE /* driver.c in Sources */,
+				245CDD731DF4A3C900AC04DE /* main.swift in Sources */,
+				245CDD6E1DF4A18600AC04DE /* Chapter_2_Tests.swift in Sources */,
+				245CDD741DF4A3E600AC04DE /* lex.yy.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24A87EDB1DF45E1E00BAF2F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,7 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24C4BC931DF4685F00193AA4 /* errormsg.c in Sources */,
+				245CDD7B1DF4A42D00AC04DE /* errormsg.c in Sources */,
 				24C4BC941DF4685F00193AA4 /* util.c in Sources */,
 				24C4BC8D1DF4683900193AA4 /* lex.yy.c in Sources */,
 				24C4BC961DF4695D00193AA4 /* driver.c in Sources */,
@@ -356,6 +429,36 @@
 			};
 			name = Release;
 		};
+		245CDD711DF4A18600AC04DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HHT774898M;
+				INFOPLIST_FILE = "Chapter 2 Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vinivendra.Chapter-2-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Chapter 2/Chapter 2-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		245CDD721DF4A18600AC04DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HHT774898M;
+				INFOPLIST_FILE = "Chapter 2 Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vinivendra.Chapter-2-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chapter 2/Chapter 2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		24A87EE41DF45E1E00BAF2F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -410,6 +513,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		245CDD701DF4A18600AC04DE /* Build configuration list for PBXNativeTarget "Chapter 2 Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				245CDD711DF4A18600AC04DE /* Debug */,
+				245CDD721DF4A18600AC04DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		24A87EE31DF45E1E00BAF2F6 /* Build configuration list for PBXNativeTarget "Chapter 1" */ = {
 			isa = XCConfigurationList;

@@ -10,6 +10,8 @@
 build/
 DerivedData/
 
+**/lex.yy.c
+
 ## Various settings
 *.pbxuser
 !default.pbxuser

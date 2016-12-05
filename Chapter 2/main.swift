@@ -33,7 +33,6 @@ extension Array {
 //
 public struct Token: CustomStringConvertible, Equatable {
 	public static func == (lhs: Token, rhs: Token) -> Bool {
-		print("comparing \(lhs) and \(rhs)")
 		return lhs.id == rhs.id
 			&& lhs.position == rhs.position
 			&& lhs.value == rhs.value

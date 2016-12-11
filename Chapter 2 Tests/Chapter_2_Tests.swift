@@ -23,5 +23,13 @@ class Chapter2Tests: XCTestCase {
 		                                position: 79)!))
 		XCTAssert(tokens.contains(Token(name: "COMMENT_END",
 		                                position: 90)!))
+
+		// Nothing inside the comments
+		XCTAssertEqual(tokens.count, 6)
+	}
+
+	func testIDs() {
+		let tokens = parse(file: "Chapter 2 Tests/testComments.tig")
+		tokens.prettyPrintInLines()
 	}
 }

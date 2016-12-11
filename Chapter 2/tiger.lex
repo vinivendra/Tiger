@@ -23,16 +23,13 @@ void adjust(void)
 
 %}
 
-%s COMMENT
+character [a-zA-Z]
+digit[0-9]
+
+%x COMMENT
 %%
 
-" "	 {adjust(); continue;}
-\n	 {adjust(); EM_newline(); continue;}
-","	 {adjust(); return COMMA;}
-for  	 {adjust(); return FOR;}
-[0-9]+	 {adjust(); yylval.ival=atoi(yytext); return INT;}
-
-<INITIAL>"/*" {
+<INITIAL>"/*" { // Comments
 	adjust();
 	BEGIN(COMMENT);
 	commentLevel++;
@@ -52,6 +49,26 @@ for  	 {adjust(); return FOR;}
 	return COMMENT_END;
 }
 <COMMENT>. {adjust(); continue;}
+
+
+" "	 {adjust(); continue;}
+\n	 {adjust(); EM_newline(); continue;}
+","	 {adjust(); return COMMA;}
+
+for  	 {adjust(); return FOR;}
+
+({character})({character}|{digit}|"_")* { // ID
+	adjust();
+	yylval.sval = yytext;
+	return ID;
+}
+
+[0-9]+	 { // INT
+	adjust();
+	yylval.ival = atoi(yytext);
+	return INT;
+}
+
 
 
 

@@ -1,5 +1,5 @@
 // TODO: Parse ID's
-// TODO: Parse all other tokens in Tiger 
+// TODO: Parse all other tokens in Tiger
 
 import XCTest
 

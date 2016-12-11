@@ -44,9 +44,7 @@ class List<T>: ExpressibleByArrayLiteral, CustomStringConvertible, Sequence {
 
 	//
 	var description: String {
-		get {
-			return description(withSeparator: " -> ")
-		}
+		return description(withSeparator: " -> ")
 	}
 
 	func description(withSeparator separator: String) -> String {
@@ -104,17 +102,15 @@ enum BinaryOperation: CustomStringConvertible {
 	case div
 
 	var description: String {
-		get {
-			switch self {
-			case .plus:
-				return "+"
-			case .minus:
-				return "-"
-			case .times:
-				return "*"
-			case .div:
-				return "/"
-			}
+		switch self {
+		case .plus:
+			return "+"
+		case .minus:
+			return "-"
+		case .times:
+			return "*"
+		case .div:
+			return "/"
 		}
 	}
 }
@@ -129,15 +125,13 @@ indirect enum Statement: CustomStringConvertible {
 	case print(List<Expression>)
 
 	var description: String {
-		get {
-			switch self {
-			case .compound(let statementA, let statementB):
-				return "\(statementA); \(statementB)"
-			case .assign(let id, let expression):
-				return "\(id) := \(expression)"
-			case .print(let list):
-				return "print(\(list.description(withSeparator: ", ")))"
-			}
+		switch self {
+		case .compound(let statementA, let statementB):
+			return "\(statementA); \(statementB)"
+		case .assign(let id, let expression):
+			return "\(id) := \(expression)"
+		case .print(let list):
+			return "print(\(list.description(withSeparator: ", ")))"
 		}
 	}
 
@@ -207,19 +201,17 @@ indirect enum Expression: CustomStringConvertible {
 	case sequential(Statement, Expression)
 
 	var description: String {
-		get {
-			switch self {
-			case .id(let id):
-				return id
-			case .number(let int):
-				return "\(int)"
-			case .operation(let expressionA,
-			                let binaryOperation,
-			                let expressionB):
-				return "\(expressionA)\(binaryOperation)\(expressionB)"
-			case .sequential(let statement, let expression):
-				return "(\(statement), \(expression))"
-			}
+		switch self {
+		case .id(let id):
+			return id
+		case .number(let int):
+			return "\(int)"
+		case .operation(let expressionA,
+		                let binaryOperation,
+		                let expressionB):
+			return "\(expressionA)\(binaryOperation)\(expressionB)"
+		case .sequential(let statement, let expression):
+			return "(\(statement), \(expression))"
 		}
 	}
 

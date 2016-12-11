@@ -10,12 +10,10 @@ public struct Token: CustomStringConvertible, Equatable {
 	let value: SemanticValue?
 
 	var name: String {
-		get {
-			precondition(
-				id >= Token.namesBaseIndex &&
+		precondition(
+			id >= Token.namesBaseIndex &&
 				id <= Token.namesBaseIndex + Token.namesCount)
-			return Token.names[id - Token.namesBaseIndex]
-		}
+		return Token.names[id - Token.namesBaseIndex]
 	}
 
 	init(id: CInt, position: CInt = EM_tokPos, value: SemanticValue? = nil) {
@@ -50,13 +48,11 @@ public struct Token: CustomStringConvertible, Equatable {
 		case string(String)
 
 		var description: String {
-			get {
-				switch self {
-				case .int(let int):
-					return String(int)
-				case .string(let string):
-					return string
-				}
+			switch self {
+			case .int(let int):
+				return String(int)
+			case .string(let string):
+				return string
 			}
 		}
 	}
@@ -76,12 +72,10 @@ public struct Token: CustomStringConvertible, Equatable {
 
 	//
 	public var description: String {
-		get {
-			if let value = self.value?.description {
-				return "(\(name) at \(position): \(value))"
-			} else {
-				return "(\(name) at \(position))"
-			}
+		if let value = self.value?.description {
+			return "(\(name) at \(position): \(value))"
+		} else {
+			return "(\(name) at \(position))"
 		}
 	}
 }

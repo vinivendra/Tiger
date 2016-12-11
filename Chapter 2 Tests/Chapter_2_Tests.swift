@@ -31,18 +31,17 @@ class Chapter2Tests: XCTestCase {
 		let tokens = parse(file: "Chapter 2 Tests/testIDs.tig")
 		tokens.prettyPrintInLines()
 
-		// TODO: refactor semantic value to accept Any raw representation
 		XCTAssert(tokens.contains(Token(name: "ID",
 		                                position: 33,
-		                                value: .string("foo"))!))
+		                                value: "foo")!))
 		XCTAssert(tokens.contains(Token(name: "ID",
 		                                position: 37,
-		                                value: .string("bar"))!))
+		                                value: "bar")!))
 		XCTAssert(tokens.contains(Token(name: "ID",
 		                                position: 103,
-		                                value: .string("baz"))!))
+		                                value: "baz")!))
 		XCTAssert(tokens.contains(Token(name: "ID",
 		                                position: 107,
-		                                value: .string("blah"))!))
+		                                value: "blah")!))
 	}
 }

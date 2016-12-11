@@ -95,7 +95,7 @@ public func parse(file: String) -> [Token] {
 		switch tokenID {
 		case ID, STRING:
 			token = Token(id: tokenID,
-			              value: .string(String(describing: yylval.sval)))
+			              value: .string(String(cString: yylval.sval)))
 		case INT:
 			token = Token(id: tokenID,
 			              value: .int(CInt(yylval.ival)))

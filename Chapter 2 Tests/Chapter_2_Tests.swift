@@ -6,7 +6,6 @@ import XCTest
 class Chapter2Tests: XCTestCase {
 	func testComments() {
 		let tokens = parse(file: "Chapter 2 Tests/testComments.tig")
-		tokens.prettyPrintInLines()
 
 		// Simple comment
 		XCTAssert(tokens.contains(Token(name: "COMMENT_START",
@@ -31,5 +30,7 @@ class Chapter2Tests: XCTestCase {
 	func testIDs() {
 		let tokens = parse(file: "Chapter 2 Tests/testComments.tig")
 		tokens.prettyPrintInLines()
+
+		
 	}
 }

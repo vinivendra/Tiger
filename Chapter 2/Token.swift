@@ -1,5 +1,3 @@
-// TODO: Refactor common code into ../Common
-
 public struct Token: CustomStringConvertible, Equatable {
 	public static func == (lhs: Token, rhs: Token) -> Bool {
 		return lhs.id == rhs.id
@@ -115,36 +113,3 @@ extension String: SemanticValueable {
 		return .string(self)
 	}
 }
-
-//
-public func parse(file: String) -> [Token] {
-	let path = CommandLine.arguments[1] + "/"
-	let filename = path + file
-	filename.withMutableCString { EM_reset($0) }
-
-	var tokens = [Token]()
-	let getNextToken = yylex
-
-	var tokenID = getNextToken()
-	while tokenID != 0 {
-		let token: Token
-		switch tokenID {
-		case ID, STRING:
-			token = Token(id: tokenID,
-			              value: String(cString: yylval.sval))
-		case INT:
-			token = Token(id: tokenID,
-			              value: CInt(yylval.ival))
-		default:
-			token = Token(id: tokenID)
-		}
-
-		tokens.append(token)
-		tokenID = getNextToken()
-	}
-
-	return tokens
-}
-
-let tokens = parse(file: "Chapter 2/test.tig")
-tokens.prettyPrintInLines()

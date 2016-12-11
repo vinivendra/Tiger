@@ -22,6 +22,11 @@ extension Array {
 	func prettyPrintInLines() {
 		self.prettyPrint(initiator: "", separator: "\n", terminator: "")
 	}
+
+	subscript (safe index: Int) -> Element? {
+		guard index < count else { return nil }
+		return self[index]
+	}
 }
 
 extension String {

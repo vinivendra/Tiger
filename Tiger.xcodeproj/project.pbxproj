@@ -22,6 +22,7 @@
 		24C4BC8D1DF4683900193AA4 /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC8C1DF4683900193AA4 /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		24C4BC941DF4685F00193AA4 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC911DF4685F00193AA4 /* util.c */; };
 		24C4BC961DF4695D00193AA4 /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC951DF4695D00193AA4 /* driver.c */; };
+		24F664821DFD7E4200E8638D /* testIDs.tig in Resources */ = {isa = PBXBuildFile; fileRef = 24F664811DFD7E4200E8638D /* testIDs.tig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +67,7 @@
 		24C4BC971DF46A8700193AA4 /* tiger.lex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tiger.lex; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		24C4BC9A1DF46B0200193AA4 /* driver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = driver.h; sourceTree = "<group>"; };
 		24C4BC9B1DF46FD000193AA4 /* test.tig */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.tig; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		24F664811DFD7E4200E8638D /* testIDs.tig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testIDs.tig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */,
 				245CDD7D1DF4F7EC00AC04DE /* testComments.tig */,
+				24F664811DFD7E4200E8638D /* testIDs.tig */,
 				245CDD6F1DF4A18600AC04DE /* Info.plist */,
 			);
 			path = "Chapter 2 Tests";
@@ -283,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F664821DFD7E4200E8638D /* testIDs.tig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +543,7 @@
 				245CDD721DF4A18600AC04DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24A87EE31DF45E1E00BAF2F6 /* Build configuration list for PBXNativeTarget "Chapter 1" */ = {
 			isa = XCConfigurationList;

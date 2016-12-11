@@ -87,11 +87,10 @@ public func parse(file: String) -> [Token] {
 	filename.withMutableCString { EM_reset($0) }
 
 	var tokens = [Token]()
+	let getNextToken = yylex
 
-	var tokenID = yylex()
+	var tokenID = getNextToken()
 	while tokenID != 0 {
-		defer { tokenID = yylex() }
-
 		let token: Token
 		switch tokenID {
 		case ID, STRING:
@@ -105,6 +104,7 @@ public func parse(file: String) -> [Token] {
 		}
 
 		tokens.append(token)
+		tokenID = getNextToken()
 	}
 
 	return tokens

@@ -1,0 +1,8 @@
+/* This is a simple comment */
+
+foo bar
+
+/* This is a comment /* with a nested comment */ foo bar */
+
+baz
+blah

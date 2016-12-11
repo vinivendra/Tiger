@@ -28,9 +28,21 @@ class Chapter2Tests: XCTestCase {
 	}
 
 	func testIDs() {
-		let tokens = parse(file: "Chapter 2 Tests/testComments.tig")
+		let tokens = parse(file: "Chapter 2 Tests/testIDs.tig")
 		tokens.prettyPrintInLines()
 
-		
+		// TODO: refactor semantic value to accept Any raw representation
+		XCTAssert(tokens.contains(Token(name: "ID",
+		                                position: 33,
+		                                value: .string("foo"))!))
+		XCTAssert(tokens.contains(Token(name: "ID",
+		                                position: 37,
+		                                value: .string("bar"))!))
+		XCTAssert(tokens.contains(Token(name: "ID",
+		                                position: 103,
+		                                value: .string("baz"))!))
+		XCTAssert(tokens.contains(Token(name: "ID",
+		                                position: 107,
+		                                value: .string("blah"))!))
 	}
 }

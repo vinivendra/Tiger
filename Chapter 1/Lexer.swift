@@ -87,7 +87,7 @@ indirect enum Statement: CustomStringConvertible {
 	}
 
 	//
-	func visit(_ closure: (Statement) -> ()) {
+	func visit(_ closure: (Statement) -> Void) {
 		closure(self)
 
 		switch self {
@@ -183,7 +183,7 @@ indirect enum Expression: CustomStringConvertible {
 			return (result: result, table: table)
 	}
 
-	func visit(_ closure: (Statement) -> ()) {
+	func visit(_ closure: (Statement) -> Void) {
 		switch self {
 		case .id: break
 		case .number: break

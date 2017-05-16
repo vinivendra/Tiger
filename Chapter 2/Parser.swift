@@ -11,7 +11,7 @@ enum Parser {
 		while tokenID != 0 {
 			let token: Token
 			switch tokenID {
-			case ID, STRING:
+			case ID, TYPE, STRING:
 				token = Token(id: tokenID,
 				              value: String(cString: yylval.sval))
 			case INT:

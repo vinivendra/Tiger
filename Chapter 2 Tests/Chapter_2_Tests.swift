@@ -29,7 +29,7 @@ class Chapter2Tests: XCTestCase {
 
 	func testIDs() {
 		let tokens = Parser.parse(file: "Chapter 2 Tests/testIDs.tig")
-
+    print(tokens)
 		XCTAssert(tokens.contains(Token(name: "ID",
 		                                position: 33,
 		                                value: "foo")!))
@@ -42,5 +42,7 @@ class Chapter2Tests: XCTestCase {
 		XCTAssert(tokens.contains(Token(name: "ID",
 		                                position: 107,
 		                                value: "blah")!))
+
+    XCTAssertEqual(tokens.filter { $0.name == "ID" }.count, 4)
 	}
 }

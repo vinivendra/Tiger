@@ -23,6 +23,8 @@ void adjust(void)
 
 %}
 
+lowerCharacter [a-z]
+upperCharacter [A-Z]
 character [a-zA-Z]
 digit[0-9]
 
@@ -57,10 +59,16 @@ digit[0-9]
 
 for  	 {adjust(); return FOR;}
 
-({character})({character}|{digit}|"_")* { // ID
+({lowerCharacter})({character}|{digit}|"_")* { // ID
 	adjust();
 	yylval.sval = yytext;
 	return ID;
+}
+
+({upperCharacter})({character}|{digit}|"_")* { // Type
+  adjust();
+  yylval.sval = yytext;
+  return TYPE;
 }
 
 [0-9]+	 { // INT

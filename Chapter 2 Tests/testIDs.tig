@@ -2,10 +2,22 @@
 
 foo bar
 
-/* This is a comment /* with a nested comment */ foo bar */
+/* This is a comment /* With a nested comment */ foo bar */
 
 baz
 blah
+b0lah
+b0l0ah
+blah0
+b0lah_
+b_lah
+b_l_ah
 
 HUE
 Hue
+Hue_
+Hue2
+Hue2hue
+H_ue
+H_u_e
+Hue_2_hue

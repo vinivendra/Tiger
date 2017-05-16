@@ -51,7 +51,6 @@
 		245CDD7A1DF4A42D00AC04DE /* errormsg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = errormsg.c; sourceTree = "<group>"; };
 		245CDD7D1DF4F7EC00AC04DE /* testComments.tig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testComments.tig; sourceTree = "<group>"; };
 		245CDD7F1DF4FDC400AC04DE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Common/Extensions.swift; sourceTree = SOURCE_ROOT; };
-		24AB0AAF1ECB3B4100870BE6 /* testTypes.tig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testTypes.tig; sourceTree = "<group>"; };
 		24C4BC8B1DF4683900193AA4 /* Chapter 2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chapter 2-Bridging-Header.h"; sourceTree = "<group>"; };
 		24C4BC8C1DF4683900193AA4 /* lex.yy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lex.yy.c; sourceTree = "<group>"; };
 		24C4BC8F1DF4685F00193AA4 /* errormsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = errormsg.h; sourceTree = "<group>"; };
@@ -126,7 +125,6 @@
 				245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */,
 				245CDD7D1DF4F7EC00AC04DE /* testComments.tig */,
 				24F664811DFD7E4200E8638D /* testIDs.tig */,
-				24AB0AAF1ECB3B4100870BE6 /* testTypes.tig */,
 			);
 			path = "Chapter 2 Tests";
 			sourceTree = SOURCE_ROOT;

@@ -45,4 +45,18 @@ class Chapter2Tests: XCTestCase {
 
     XCTAssertEqual(tokens.filter { $0.name == "ID" }.count, 4)
 	}
+
+  // TODO: Test for Types and IDs with numbers and snake case
+  func testTypes() {
+    let tokens = Parser.parse(file: "Chapter 2 Tests/testTypes.tig")
+    print(tokens)
+    XCTAssert(tokens.contains(Token(name: "TYPE",
+                                    position: 113,
+                                    value: "HUE")!))
+    XCTAssert(tokens.contains(Token(name: "TYPE",
+                                    position: 117,
+                                    value: "Hue")!))
+
+    XCTAssertEqual(tokens.filter { $0.name == "TYPE" }.count, 2)
+  }
 }

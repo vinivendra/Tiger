@@ -1,0 +1,8 @@
+disabled_rules:
+  - todo
+  - variable_name
+  - force_try
+
+line_length:
+  - 80  # warning
+  - 100 # error

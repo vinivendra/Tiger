@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2404BEE71ECD0D6300D26DBC /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE01ECD0D6300D26DBC /* driver.c */; };
+		2404BEE81ECD0D6300D26DBC /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE01ECD0D6300D26DBC /* driver.c */; };
+		2404BEE91ECD0D6300D26DBC /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE21ECD0D6300D26DBC /* errormsg.c */; };
+		2404BEEA1ECD0D6300D26DBC /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE21ECD0D6300D26DBC /* errormsg.c */; };
+		2404BEEB1ECD0D6300D26DBC /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE51ECD0D6300D26DBC /* util.c */; };
+		2404BEEC1ECD0D6300D26DBC /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE51ECD0D6300D26DBC /* util.c */; };
+		2404BEEE1ECD0E3100D26DBC /* tiger.lex in Resources */ = {isa = PBXBuildFile; fileRef = 2404BEED1ECD0E3100D26DBC /* tiger.lex */; };
+		2404BEF41ECD0F0100D26DBC /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEF31ECD0F0100D26DBC /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		2404BEF51ECD0F0100D26DBC /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEF31ECD0F0100D26DBC /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		245CDD6E1DF4A18600AC04DE /* Chapter_2_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */; };
-		245CDD741DF4A3E600AC04DE /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC8C1DF4683900193AA4 /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
-		245CDD761DF4A3F100AC04DE /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC911DF4685F00193AA4 /* util.c */; };
-		245CDD771DF4A3F100AC04DE /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC951DF4695D00193AA4 /* driver.c */; };
-		245CDD7C1DF4A42D00AC04DE /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7A1DF4A42D00AC04DE /* errormsg.c */; };
 		24F386971DFD9150002FFA31 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F386951DFD9150002FFA31 /* Lexer.swift */; };
 		24F386981DFD91C1002FFA31 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7F1DF4FDC400AC04DE /* Extensions.swift */; };
 		24F386991DFD91C1002FFA31 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7F1DF4FDC400AC04DE /* Extensions.swift */; };
 		24F386AF1DFD97CD002FFA31 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F386AD1DFD97CB002FFA31 /* Token.swift */; };
-		24F386B01DFD9D13002FFA31 /* testIDs.tig in Resources */ = {isa = PBXBuildFile; fileRef = 24F664811DFD7E4200E8638D /* testIDs.tig */; };
-		24F386B11DFD9D16002FFA31 /* testComments.tig in Resources */ = {isa = PBXBuildFile; fileRef = 245CDD7D1DF4F7EC00AC04DE /* testComments.tig */; };
 		24F386BF1DFD9DFF002FFA31 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F386BD1DFD9DFF002FFA31 /* Parser.swift */; };
 		24F386C71DFD9E8D002FFA31 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F386C61DFD9E8D002FFA31 /* main.swift */; };
 		24F386D21DFD9FA4002FFA31 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F386951DFD9150002FFA31 /* Lexer.swift */; };
@@ -25,10 +28,6 @@
 		24F386D71DFD9FB6002FFA31 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7F1DF4FDC400AC04DE /* Extensions.swift */; };
 		24F386D81DFD9FB6002FFA31 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F386BD1DFD9DFF002FFA31 /* Parser.swift */; };
 		24F386D91DFD9FB6002FFA31 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F386AD1DFD97CB002FFA31 /* Token.swift */; };
-		24F386DA1DFD9FC5002FFA31 /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC8C1DF4683900193AA4 /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
-		24F386DB1DFD9FC5002FFA31 /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7A1DF4A42D00AC04DE /* errormsg.c */; };
-		24F386DC1DFD9FC5002FFA31 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC911DF4685F00193AA4 /* util.c */; };
-		24F386DD1DFD9FC5002FFA31 /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C4BC951DF4695D00193AA4 /* driver.c */; };
 		24F6648E1DFD897E00E8638D /* Chapter_1_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F6648D1DFD897E00E8638D /* Chapter_1_Tests.swift */; };
 		24F664951DFD89EB00E8638D /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F664831DFD88C300E8638D /* List.swift */; };
 /* End PBXBuildFile section */
@@ -46,28 +45,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2404BEE01ECD0D6300D26DBC /* driver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = driver.c; path = "Common/C Interface/driver.c"; sourceTree = "<group>"; };
+		2404BEE11ECD0D6300D26DBC /* driver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = driver.h; path = "Common/C Interface/driver.h"; sourceTree = "<group>"; };
+		2404BEE21ECD0D6300D26DBC /* errormsg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = errormsg.c; path = "Common/C Interface/errormsg.c"; sourceTree = "<group>"; };
+		2404BEE31ECD0D6300D26DBC /* errormsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = errormsg.h; path = "Common/C Interface/errormsg.h"; sourceTree = "<group>"; };
+		2404BEE41ECD0D6300D26DBC /* tokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tokens.h; path = "Common/C Interface/tokens.h"; sourceTree = "<group>"; };
+		2404BEE51ECD0D6300D26DBC /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = util.c; path = "Common/C Interface/util.c"; sourceTree = "<group>"; };
+		2404BEE61ECD0D6300D26DBC /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = "Common/C Interface/util.h"; sourceTree = "<group>"; };
+		2404BEED1ECD0E3100D26DBC /* tiger.lex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = tiger.lex; path = "Common/Compiler declarations/tiger.lex"; sourceTree = SOURCE_ROOT; };
+		2404BEF11ECD0E7A00D26DBC /* testComments.tig */ = {isa = PBXFileReference; lastKnownFileType = text; path = testComments.tig; sourceTree = "<group>"; };
+		2404BEF21ECD0E7A00D26DBC /* testIDs.tig */ = {isa = PBXFileReference; lastKnownFileType = text; path = testIDs.tig; sourceTree = "<group>"; };
+		2404BEF31ECD0F0100D26DBC /* lex.yy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lex.yy.c; path = "Common/Compiler declarations/lex.yy.c"; sourceTree = "<group>"; };
+		2404BEF61ECD0F9000D26DBC /* Tiger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Tiger-Bridging-Header.h"; path = "Common/C Interface/Tiger-Bridging-Header.h"; sourceTree = "<group>"; };
 		245CDD6B1DF4A18600AC04DE /* Chapter 2 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chapter 2 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter_2_Tests.swift; sourceTree = "<group>"; };
-		245CDD7A1DF4A42D00AC04DE /* errormsg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = errormsg.c; sourceTree = "<group>"; };
-		245CDD7D1DF4F7EC00AC04DE /* testComments.tig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testComments.tig; sourceTree = "<group>"; };
 		245CDD7F1DF4FDC400AC04DE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Common/Extensions.swift; sourceTree = SOURCE_ROOT; };
-		24C4BC8B1DF4683900193AA4 /* Chapter 2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chapter 2-Bridging-Header.h"; sourceTree = "<group>"; };
-		24C4BC8C1DF4683900193AA4 /* lex.yy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lex.yy.c; sourceTree = "<group>"; };
-		24C4BC8F1DF4685F00193AA4 /* errormsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = errormsg.h; sourceTree = "<group>"; };
-		24C4BC901DF4685F00193AA4 /* tokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokens.h; sourceTree = "<group>"; };
-		24C4BC911DF4685F00193AA4 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
-		24C4BC921DF4685F00193AA4 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
-		24C4BC951DF4695D00193AA4 /* driver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = driver.c; sourceTree = "<group>"; };
-		24C4BC971DF46A8700193AA4 /* tiger.lex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tiger.lex; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
-		24C4BC9A1DF46B0200193AA4 /* driver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = driver.h; sourceTree = "<group>"; };
-		24C4BC9B1DF46FD000193AA4 /* test.tig */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.tig; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		24F386951DFD9150002FFA31 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		24F386AD1DFD97CB002FFA31 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		24F386BD1DFD9DFF002FFA31 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		24F386C41DFD9E8D002FFA31 /* Tiger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tiger; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F386C61DFD9E8D002FFA31 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		24F386D11DFD9F48002FFA31 /* Tiger-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tiger-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		24F664811DFD7E4200E8638D /* testIDs.tig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testIDs.tig; sourceTree = "<group>"; };
 		24F664831DFD88C300E8638D /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = Common/List.swift; sourceTree = SOURCE_ROOT; };
 		24F6648B1DFD897E00E8638D /* Chapter 1 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chapter 1 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F6648D1DFD897E00E8638D /* Chapter_1_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter_1_Tests.swift; sourceTree = "<group>"; };
@@ -98,6 +95,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2404BEDE1ECD0BF200D26DBC /* C Interface */ = {
+			isa = PBXGroup;
+			children = (
+				2404BEF61ECD0F9000D26DBC /* Tiger-Bridging-Header.h */,
+				2404BEE01ECD0D6300D26DBC /* driver.c */,
+				2404BEE11ECD0D6300D26DBC /* driver.h */,
+				2404BEE21ECD0D6300D26DBC /* errormsg.c */,
+				2404BEE31ECD0D6300D26DBC /* errormsg.h */,
+				2404BEE41ECD0D6300D26DBC /* tokens.h */,
+				2404BEE51ECD0D6300D26DBC /* util.c */,
+				2404BEE61ECD0D6300D26DBC /* util.h */,
+			);
+			name = "C Interface";
+			sourceTree = "<group>";
+		};
+		2404BEEF1ECD0E5F00D26DBC /* Compiler declarations */ = {
+			isa = PBXGroup;
+			children = (
+				2404BEED1ECD0E3100D26DBC /* tiger.lex */,
+				2404BEF31ECD0F0100D26DBC /* lex.yy.c */,
+			);
+			name = "Compiler declarations";
+			sourceTree = "<group>";
+		};
+		2404BEF01ECD0E7A00D26DBC /* Test files */ = {
+			isa = PBXGroup;
+			children = (
+				2404BEF11ECD0E7A00D26DBC /* testComments.tig */,
+				2404BEF21ECD0E7A00D26DBC /* testIDs.tig */,
+			);
+			name = "Test files";
+			path = "Common/Test files";
+			sourceTree = "<group>";
+		};
 		243BF2641DEF0DE000F0202B = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */,
-				245CDD7D1DF4F7EC00AC04DE /* testComments.tig */,
-				24F664811DFD7E4200E8638D /* testIDs.tig */,
 			);
 			path = "Chapter 2 Tests";
 			sourceTree = SOURCE_ROOT;
@@ -134,6 +163,9 @@
 			children = (
 				245CDD7F1DF4FDC400AC04DE /* Extensions.swift */,
 				24F664831DFD88C300E8638D /* List.swift */,
+				2404BEF01ECD0E7A00D26DBC /* Test files */,
+				2404BEEF1ECD0E5F00D26DBC /* Compiler declarations */,
+				2404BEDE1ECD0BF200D26DBC /* C Interface */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -153,41 +185,13 @@
 				245CDD6C1DF4A18600AC04DE /* Chapter 2 Tests */,
 				24F386BD1DFD9DFF002FFA31 /* Parser.swift */,
 				24F386AD1DFD97CB002FFA31 /* Token.swift */,
-				24C4BC8B1DF4683900193AA4 /* Chapter 2-Bridging-Header.h */,
-				24C4BC9B1DF46FD000193AA4 /* test.tig */,
-				24C4BC981DF46A8C00193AA4 /* Flex */,
-				24C4BC991DF46A9800193AA4 /* C Files */,
 			);
 			path = "Chapter 2";
-			sourceTree = "<group>";
-		};
-		24C4BC981DF46A8C00193AA4 /* Flex */ = {
-			isa = PBXGroup;
-			children = (
-				24C4BC8C1DF4683900193AA4 /* lex.yy.c */,
-				24C4BC971DF46A8700193AA4 /* tiger.lex */,
-			);
-			name = Flex;
-			sourceTree = "<group>";
-		};
-		24C4BC991DF46A9800193AA4 /* C Files */ = {
-			isa = PBXGroup;
-			children = (
-				24C4BC901DF4685F00193AA4 /* tokens.h */,
-				245CDD7A1DF4A42D00AC04DE /* errormsg.c */,
-				24C4BC8F1DF4685F00193AA4 /* errormsg.h */,
-				24C4BC911DF4685F00193AA4 /* util.c */,
-				24C4BC921DF4685F00193AA4 /* util.h */,
-				24C4BC951DF4695D00193AA4 /* driver.c */,
-				24C4BC9A1DF46B0200193AA4 /* driver.h */,
-			);
-			name = "C Files";
 			sourceTree = "<group>";
 		};
 		24F386C51DFD9E8D002FFA31 /* Tiger */ = {
 			isa = PBXGroup;
 			children = (
-				24F386D11DFD9F48002FFA31 /* Tiger-Bridging-Header.h */,
 				24F386C61DFD9E8D002FFA31 /* main.swift */,
 			);
 			path = Tiger;
@@ -308,8 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24F386B11DFD9D16002FFA31 /* testComments.tig in Resources */,
-				24F386B01DFD9D13002FFA31 /* testIDs.tig in Resources */,
+				2404BEEE1ECD0E3100D26DBC /* tiger.lex in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +352,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $SRCROOT/Chapter\\ 2\nlex tiger.lex";
+			shellScript = "cd $SRCROOT/Common/Compiler\\ declarations\nlex tiger.lex";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -358,12 +361,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				245CDD7C1DF4A42D00AC04DE /* errormsg.c in Sources */,
-				245CDD761DF4A3F100AC04DE /* util.c in Sources */,
-				245CDD771DF4A3F100AC04DE /* driver.c in Sources */,
+				2404BEEA1ECD0D6300D26DBC /* errormsg.c in Sources */,
+				2404BEE81ECD0D6300D26DBC /* driver.c in Sources */,
+				2404BEEC1ECD0D6300D26DBC /* util.c in Sources */,
+				2404BEF51ECD0F0100D26DBC /* lex.yy.c in Sources */,
 				245CDD6E1DF4A18600AC04DE /* Chapter_2_Tests.swift in Sources */,
 				24F386BF1DFD9DFF002FFA31 /* Parser.swift in Sources */,
-				245CDD741DF4A3E600AC04DE /* lex.yy.c in Sources */,
 				24F386981DFD91C1002FFA31 /* Extensions.swift in Sources */,
 				24F386AF1DFD97CD002FFA31 /* Token.swift in Sources */,
 			);
@@ -373,14 +376,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2404BEEB1ECD0D6300D26DBC /* util.c in Sources */,
+				2404BEE91ECD0D6300D26DBC /* errormsg.c in Sources */,
+				2404BEE71ECD0D6300D26DBC /* driver.c in Sources */,
+				2404BEF41ECD0F0100D26DBC /* lex.yy.c in Sources */,
 				24F386C71DFD9E8D002FFA31 /* main.swift in Sources */,
 				24F386D71DFD9FB6002FFA31 /* Extensions.swift in Sources */,
 				24F386D21DFD9FA4002FFA31 /* Lexer.swift in Sources */,
 				24F386D31DFD9FA5002FFA31 /* List.swift in Sources */,
-				24F386DA1DFD9FC5002FFA31 /* lex.yy.c in Sources */,
-				24F386DB1DFD9FC5002FFA31 /* errormsg.c in Sources */,
-				24F386DC1DFD9FC5002FFA31 /* util.c in Sources */,
-				24F386DD1DFD9FC5002FFA31 /* driver.c in Sources */,
 				24F386D81DFD9FB6002FFA31 /* Parser.swift in Sources */,
 				24F386D91DFD9FB6002FFA31 /* Token.swift in Sources */,
 			);
@@ -501,7 +504,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "vinivendra.Chapter-2-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "Chapter 2/Chapter 2-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/C Interface/Tiger-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -515,7 +518,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "vinivendra.Chapter-2-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Chapter 2/Chapter 2-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/C Interface/Tiger-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
@@ -526,7 +529,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = HHT774898M;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tiger-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/C Interface/Tiger-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -536,7 +539,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = HHT774898M;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tiger-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/C Interface/Tiger-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -14,5 +14,5 @@ try! prog.interpret()
 
 // Chapter 2
 print("--------- Chapter 2 ---------")
-let tokens = Parser.parse(file: "Chapter 2 Tests/testComments.tig")
+let tokens = Parser.parse(file: "Common/Test files/testComments.tig")
 tokens.prettyPrintInLines()

@@ -13,7 +13,7 @@ public struct Token: CustomStringConvertible, Equatable {
 		precondition(
 			id >= Token.namesBaseIndex &&
 				id <= Token.namesBaseIndex + Token.namesCount)
-		return Token.names[id - Token.namesBaseIndex]
+		return Token.names[Int(id - Token.namesBaseIndex)]
 	}
 
 	init(id: CInt,

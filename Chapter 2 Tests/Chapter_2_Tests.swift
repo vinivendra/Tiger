@@ -5,7 +5,7 @@ import XCTest
 
 class Chapter2Tests: XCTestCase {
 	func testComments() {
-		let tokens = Parser.parse(file: "Chapter 2 Tests/testComments.tig")
+		let tokens = Parser.parse(file: "Common/Test files/testComments.tig")
 
 		// Simple comment
 		XCTAssert(tokens.contains(Token(name: "COMMENT_START",
@@ -28,7 +28,7 @@ class Chapter2Tests: XCTestCase {
 	}
 
 	func testIDs() {
-		let tokens = Parser.parse(file: "Chapter 2 Tests/testIDs.tig")
+		let tokens = Parser.parse(file: "Common/Test files/testIDs.tig")
     print(tokens)
     let ids: [(position: CInt, value: String)] =
       [(33, "foo"), (37, "bar"), (103, "baz"), (107, "blah"), (112, "b0lah"),
@@ -45,7 +45,7 @@ class Chapter2Tests: XCTestCase {
 	}
 
   func testTypes() {
-    let tokens = Parser.parse(file: "Chapter 2 Tests/testIDs.tig")
+    let tokens = Parser.parse(file: "Common/Test files/testIDs.tig")
     print(tokens)
 
     let types: [(position: CInt, value: String)] =

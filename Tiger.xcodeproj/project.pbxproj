@@ -16,6 +16,11 @@
 		2404BEEE1ECD0E3100D26DBC /* tiger.lex in Resources */ = {isa = PBXBuildFile; fileRef = 2404BEED1ECD0E3100D26DBC /* tiger.lex */; };
 		2404BEF41ECD0F0100D26DBC /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEF31ECD0F0100D26DBC /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		2404BEF51ECD0F0100D26DBC /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEF31ECD0F0100D26DBC /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		245890581ECDE0D500B380D2 /* Chapter_3_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245890571ECDE0D500B380D2 /* Chapter_3_Tests.swift */; };
+		2458905D1ECDE1B000B380D2 /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE01ECD0D6300D26DBC /* driver.c */; };
+		2458905E1ECDE1B200B380D2 /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE21ECD0D6300D26DBC /* errormsg.c */; };
+		2458905F1ECDE1B400B380D2 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE51ECD0D6300D26DBC /* util.c */; };
+		245890601ECDE1B700B380D2 /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEF31ECD0F0100D26DBC /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		245CDD6E1DF4A18600AC04DE /* Chapter_2_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */; };
 		24F386971DFD9150002FFA31 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F386951DFD9150002FFA31 /* Lexer.swift */; };
 		24F386981DFD91C1002FFA31 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDD7F1DF4FDC400AC04DE /* Extensions.swift */; };
@@ -57,6 +62,11 @@
 		2404BEF21ECD0E7A00D26DBC /* testIDs.tig */ = {isa = PBXFileReference; lastKnownFileType = text; path = testIDs.tig; sourceTree = "<group>"; };
 		2404BEF31ECD0F0100D26DBC /* lex.yy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lex.yy.c; path = "Common/Compiler declarations/lex.yy.c"; sourceTree = "<group>"; };
 		2404BEF61ECD0F9000D26DBC /* Tiger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Tiger-Bridging-Header.h"; path = "Common/C Interface/Tiger-Bridging-Header.h"; sourceTree = "<group>"; };
+		2458904B1ECDE07900B380D2 /* Chapter_3_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter_3_Tests.swift; sourceTree = "<group>"; };
+		2458904D1ECDE07900B380D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		245890551ECDE0D500B380D2 /* Chapter 3 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chapter 3 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		245890571ECDE0D500B380D2 /* Chapter_3_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter_3_Tests.swift; sourceTree = "<group>"; };
+		245890591ECDE0D500B380D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245CDD6B1DF4A18600AC04DE /* Chapter 2 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chapter 2 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		245CDD6D1DF4A18600AC04DE /* Chapter_2_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter_2_Tests.swift; sourceTree = "<group>"; };
 		245CDD7F1DF4FDC400AC04DE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Common/Extensions.swift; sourceTree = SOURCE_ROOT; };
@@ -71,6 +81,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		245890521ECDE0D500B380D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		245CDD681DF4A18600AC04DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +153,8 @@
 				245CDD831DF4FDF500AC04DE /* Common */,
 				24A87EE01DF45E1E00BAF2F6 /* Chapter 1 */,
 				24C4BC821DF4635F00193AA4 /* Chapter 2 */,
+				2458903E1ECDE06C00B380D2 /* Chapter 3 */,
+				245890561ECDE0D500B380D2 /* Chapter 3 Tests */,
 				243BF26E1DEF0DE000F0202B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,8 +165,35 @@
 				245CDD6B1DF4A18600AC04DE /* Chapter 2 Tests.xctest */,
 				24F6648B1DFD897E00E8638D /* Chapter 1 Tests.xctest */,
 				24F386C41DFD9E8D002FFA31 /* Tiger */,
+				245890551ECDE0D500B380D2 /* Chapter 3 Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2458903E1ECDE06C00B380D2 /* Chapter 3 */ = {
+			isa = PBXGroup;
+			children = (
+				2458904A1ECDE07900B380D2 /* Chapter 3 Tests */,
+			);
+			path = "Chapter 3";
+			sourceTree = "<group>";
+		};
+		2458904A1ECDE07900B380D2 /* Chapter 3 Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2458904B1ECDE07900B380D2 /* Chapter_3_Tests.swift */,
+				2458904D1ECDE07900B380D2 /* Info.plist */,
+			);
+			path = "Chapter 3 Tests";
+			sourceTree = SOURCE_ROOT;
+		};
+		245890561ECDE0D500B380D2 /* Chapter 3 Tests */ = {
+			isa = PBXGroup;
+			children = (
+				245890571ECDE0D500B380D2 /* Chapter_3_Tests.swift */,
+				245890591ECDE0D500B380D2 /* Info.plist */,
+			);
+			path = "Chapter 3 Tests";
 			sourceTree = "<group>";
 		};
 		245CDD6C1DF4A18600AC04DE /* Chapter 2 Tests */ = {
@@ -208,6 +254,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		245890541ECDE0D500B380D2 /* Chapter 3 Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2458905A1ECDE0D500B380D2 /* Build configuration list for PBXNativeTarget "Chapter 3 Tests" */;
+			buildPhases = (
+				245890511ECDE0D500B380D2 /* Sources */,
+				245890521ECDE0D500B380D2 /* Frameworks */,
+				245890531ECDE0D500B380D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chapter 3 Tests";
+			productName = "Chapter 3 Tests";
+			productReference = 245890551ECDE0D500B380D2 /* Chapter 3 Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		245CDD6A1DF4A18600AC04DE /* Chapter 2 Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 245CDD701DF4A18600AC04DE /* Build configuration list for PBXNativeTarget "Chapter 2 Tests" */;
@@ -267,10 +330,15 @@
 		243BF2651DEF0DE000F0202B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Vinicius Vendramini";
 				TargetAttributes = {
+					245890541ECDE0D500B380D2 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = HHT774898M;
+						ProvisioningStyle = Automatic;
+					};
 					245CDD6A1DF4A18600AC04DE = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = HHT774898M;
@@ -303,11 +371,19 @@
 				24F386C31DFD9E8D002FFA31 /* Tiger */,
 				24F6648A1DFD897E00E8638D /* Chapter 1 Tests */,
 				245CDD6A1DF4A18600AC04DE /* Chapter 2 Tests */,
+				245890541ECDE0D500B380D2 /* Chapter 3 Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		245890531ECDE0D500B380D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		245CDD691DF4A18600AC04DE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,6 +433,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		245890511ECDE0D500B380D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2458905D1ECDE1B000B380D2 /* driver.c in Sources */,
+				2458905E1ECDE1B200B380D2 /* errormsg.c in Sources */,
+				2458905F1ECDE1B400B380D2 /* util.c in Sources */,
+				245890601ECDE1B700B380D2 /* lex.yy.c in Sources */,
+				245890581ECDE0D500B380D2 /* Chapter_3_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		245CDD671DF4A18600AC04DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,6 +582,37 @@
 			};
 			name = Release;
 		};
+		2458905B1ECDE0D500B380D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HHT774898M;
+				INFOPLIST_FILE = "Chapter 3 Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vinivendra.Chapter-3-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/C Interface/Tiger-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2458905C1ECDE0D500B380D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HHT774898M;
+				INFOPLIST_FILE = "Chapter 3 Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vinivendra.Chapter-3-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/C Interface/Tiger-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		245CDD711DF4A18600AC04DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -583,6 +702,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2458905A1ECDE0D500B380D2 /* Build configuration list for PBXNativeTarget "Chapter 3 Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2458905B1ECDE0D500B380D2 /* Debug */,
+				2458905C1ECDE0D500B380D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		245CDD701DF4A18600AC04DE /* Build configuration list for PBXNativeTarget "Chapter 2 Tests" */ = {
 			isa = XCConfigurationList;

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2404BEE71ECD0D6300D26DBC /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE01ECD0D6300D26DBC /* driver.c */; };
-		2404BEE81ECD0D6300D26DBC /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE01ECD0D6300D26DBC /* driver.c */; };
 		2404BEE91ECD0D6300D26DBC /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE21ECD0D6300D26DBC /* errormsg.c */; };
 		2404BEEA1ECD0D6300D26DBC /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE21ECD0D6300D26DBC /* errormsg.c */; };
 		2404BEEB1ECD0D6300D26DBC /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE51ECD0D6300D26DBC /* util.c */; };
@@ -16,8 +14,10 @@
 		2404BEEE1ECD0E3100D26DBC /* tiger.lex in Resources */ = {isa = PBXBuildFile; fileRef = 2404BEED1ECD0E3100D26DBC /* tiger.lex */; };
 		2404BEF41ECD0F0100D26DBC /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEF31ECD0F0100D26DBC /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		2404BEF51ECD0F0100D26DBC /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEF31ECD0F0100D26DBC /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		2429053F1ECE20AD00E7909D /* y.output in Resources */ = {isa = PBXBuildFile; fileRef = 2429053C1ECE20AD00E7909D /* y.output */; };
+		242905401ECE20AD00E7909D /* y.tab.c in Sources */ = {isa = PBXBuildFile; fileRef = 2429053D1ECE20AD00E7909D /* y.tab.c */; };
+		242905411ECE20AD00E7909D /* y.tab.c in Sources */ = {isa = PBXBuildFile; fileRef = 2429053D1ECE20AD00E7909D /* y.tab.c */; };
 		245890581ECDE0D500B380D2 /* Chapter_3_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245890571ECDE0D500B380D2 /* Chapter_3_Tests.swift */; };
-		2458905D1ECDE1B000B380D2 /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE01ECD0D6300D26DBC /* driver.c */; };
 		2458905E1ECDE1B200B380D2 /* errormsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE21ECD0D6300D26DBC /* errormsg.c */; };
 		2458905F1ECDE1B400B380D2 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEE51ECD0D6300D26DBC /* util.c */; };
 		245890601ECDE1B700B380D2 /* lex.yy.c in Sources */ = {isa = PBXBuildFile; fileRef = 2404BEF31ECD0F0100D26DBC /* lex.yy.c */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -50,7 +50,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2404BEE01ECD0D6300D26DBC /* driver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = driver.c; path = "Common/C Interface/driver.c"; sourceTree = "<group>"; };
 		2404BEE11ECD0D6300D26DBC /* driver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = driver.h; path = "Common/C Interface/driver.h"; sourceTree = "<group>"; };
 		2404BEE21ECD0D6300D26DBC /* errormsg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = errormsg.c; path = "Common/C Interface/errormsg.c"; sourceTree = "<group>"; };
 		2404BEE31ECD0D6300D26DBC /* errormsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = errormsg.h; path = "Common/C Interface/errormsg.h"; sourceTree = "<group>"; };
@@ -62,6 +61,10 @@
 		2404BEF21ECD0E7A00D26DBC /* testIDs.tig */ = {isa = PBXFileReference; lastKnownFileType = text; path = testIDs.tig; sourceTree = "<group>"; };
 		2404BEF31ECD0F0100D26DBC /* lex.yy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lex.yy.c; path = "Common/Compiler declarations/lex.yy.c"; sourceTree = "<group>"; };
 		2404BEF61ECD0F9000D26DBC /* Tiger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Tiger-Bridging-Header.h"; path = "Common/C Interface/Tiger-Bridging-Header.h"; sourceTree = "<group>"; };
+		2429053A1ECE205A00E7909D /* tiger.grm */ = {isa = PBXFileReference; lastKnownFileType = text; name = tiger.grm; path = "Common/Compiler declarations/tiger.grm"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		2429053C1ECE20AD00E7909D /* y.output */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = y.output; path = "Common/Compiler declarations/y.output"; sourceTree = "<group>"; };
+		2429053D1ECE20AD00E7909D /* y.tab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = y.tab.c; path = "Common/Compiler declarations/y.tab.c"; sourceTree = "<group>"; };
+		2429053E1ECE20AD00E7909D /* y.tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = y.tab.h; path = "Common/Compiler declarations/y.tab.h"; sourceTree = "<group>"; };
 		2458904B1ECDE07900B380D2 /* Chapter_3_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter_3_Tests.swift; sourceTree = "<group>"; };
 		2458904D1ECDE07900B380D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245890551ECDE0D500B380D2 /* Chapter 3 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chapter 3 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				2404BEF61ECD0F9000D26DBC /* Tiger-Bridging-Header.h */,
-				2404BEE01ECD0D6300D26DBC /* driver.c */,
 				2404BEE11ECD0D6300D26DBC /* driver.h */,
 				2404BEE21ECD0D6300D26DBC /* errormsg.c */,
 				2404BEE31ECD0D6300D26DBC /* errormsg.h */,
@@ -132,6 +134,10 @@
 			children = (
 				2404BEED1ECD0E3100D26DBC /* tiger.lex */,
 				2404BEF31ECD0F0100D26DBC /* lex.yy.c */,
+				2429053A1ECE205A00E7909D /* tiger.grm */,
+				2429053C1ECE20AD00E7909D /* y.output */,
+				2429053D1ECE20AD00E7909D /* y.tab.c */,
+				2429053E1ECE20AD00E7909D /* y.tab.h */,
 			);
 			name = "Compiler declarations";
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 			buildConfigurationList = 24F386C81DFD9E8D002FFA31 /* Build configuration list for PBXNativeTarget "Tiger" */;
 			buildPhases = (
 				24F386DF1DFDA02A002FFA31 /* Lex */,
+				2429053B1ECE206300E7909D /* Yacc */,
 				24F386DE1DFDA013002FFA31 /* Swiftlint */,
 				24F386C01DFD9E8D002FFA31 /* Sources */,
 				24F386C11DFD9E8D002FFA31 /* Frameworks */,
@@ -381,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2429053F1ECE20AD00E7909D /* y.output in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +410,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2429053B1ECE206300E7909D /* Yacc */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Yacc;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $SRCROOT/Common/Compiler\\ declarations\nyacc -dv tiger.grm";
+		};
 		24F386DE1DFDA013002FFA31 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,7 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2458905D1ECDE1B000B380D2 /* driver.c in Sources */,
+				242905411ECE20AD00E7909D /* y.tab.c in Sources */,
 				2458905E1ECDE1B200B380D2 /* errormsg.c in Sources */,
 				2458905F1ECDE1B400B380D2 /* util.c in Sources */,
 				245890601ECDE1B700B380D2 /* lex.yy.c in Sources */,
@@ -450,7 +472,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2404BEEA1ECD0D6300D26DBC /* errormsg.c in Sources */,
-				2404BEE81ECD0D6300D26DBC /* driver.c in Sources */,
 				2404BEEC1ECD0D6300D26DBC /* util.c in Sources */,
 				2404BEF51ECD0F0100D26DBC /* lex.yy.c in Sources */,
 				245CDD6E1DF4A18600AC04DE /* Chapter_2_Tests.swift in Sources */,
@@ -466,13 +487,13 @@
 			files = (
 				2404BEEB1ECD0D6300D26DBC /* util.c in Sources */,
 				2404BEE91ECD0D6300D26DBC /* errormsg.c in Sources */,
-				2404BEE71ECD0D6300D26DBC /* driver.c in Sources */,
 				2404BEF41ECD0F0100D26DBC /* lex.yy.c in Sources */,
 				24F386C71DFD9E8D002FFA31 /* main.swift in Sources */,
 				24F386D71DFD9FB6002FFA31 /* Extensions.swift in Sources */,
 				24F386D21DFD9FA4002FFA31 /* Lexer.swift in Sources */,
 				24F386D31DFD9FA5002FFA31 /* List.swift in Sources */,
 				24F386D81DFD9FB6002FFA31 /* Parser.swift in Sources */,
+				242905401ECE20AD00E7909D /* y.tab.c in Sources */,
 				24F386D91DFD9FB6002FFA31 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,6 +731,7 @@
 				2458905C1ECDE0D500B380D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		245CDD701DF4A18600AC04DE /* Build configuration list for PBXNativeTarget "Chapter 2 Tests" */ = {
 			isa = XCConfigurationList;
